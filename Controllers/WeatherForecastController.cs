@@ -16,9 +16,8 @@ namespace Quickapp_del.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
         private readonly DBConnect _con;
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, DBConnect conn)
+        public WeatherForecastController( DBConnect conn)
         {
-            _logger = logger;
             _con = conn;
         }
 

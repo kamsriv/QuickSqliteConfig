@@ -9,6 +9,7 @@
 
     public class DBConnect: DbContext
     {
+        public DBConnect() { }
         public DBConnect(DbContextOptions options):base(options) {
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -16,7 +17,7 @@
             base.OnConfiguring(optionsBuilder);
         }
        
-        public DbSet<Person> People { get; set; }
-        public DbSet<MailingAddress> Addresses { get; set; }
+        public virtual DbSet<Person> People { get; set; }
+        public virtual DbSet<MailingAddress> Addresses { get; set; }
     }
 }
